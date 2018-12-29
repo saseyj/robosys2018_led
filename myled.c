@@ -35,10 +35,8 @@ static ssize_t led_write(struct file* filp, const char* buf, size_t count, loff_
 		gpio_base[7] = 1 << 25;
 	}
 
-
 	return 1;
 }
-
 
 static struct file_operations led_fops = {
 	.owner = THIS_MODULE,
@@ -58,7 +56,6 @@ static int __init init_mod(void)
 		const u32 mask = ~(0x7 << shift);
 		gpio_base[index] = (gpio_base[index] & mask) | (0x1 << shift);
 	}
-
 
 	retval = alloc_chrdev_region(&dev, 0, 1, "myled");
 	if(retval < 0){
