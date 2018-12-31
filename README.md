@@ -7,7 +7,7 @@ LED制御用デバイスドライバ
 - LED ×2
 - 抵抗330[Ω] ×2
 ## 使用方法
-LEDをGPIO24と25にLEDを接続し次のコマンドで操作    
+LEDをGPIO24とGPIO25にLEDを接続し次のコマンドで操作    
 ```
 echo 0 > /dev/myled0    
 echo 1 > /dev/myled0   
